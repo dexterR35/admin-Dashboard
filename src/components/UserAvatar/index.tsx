@@ -13,7 +13,7 @@ type Props = {
 }
 
 export default function UserAvatar({
-  username,
+  username = "test",
   api = 'avataaars',
   className = '',
   children,

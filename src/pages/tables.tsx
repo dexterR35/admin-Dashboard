@@ -1,9 +1,9 @@
-import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from '@mdi/js'
+import { mdiTableBorder, mdiTableOff } from '@mdi/js'
 import Head from 'next/head'
 import React, { ReactElement } from 'react'
 import Button from '../components/Button'
 import CardBox from '../components/CardBox'
-import CardBoxComponentEmpty from '../components/CardBox/Component/Empty'
+
 import LayoutAuthenticated from '../layouts/Authenticated'
 import NotificationBar from '../components/NotificationBar'
 import SectionMain from '../components/Section/Main'
@@ -20,33 +20,33 @@ const TablesPage = () => {
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiTableBorder} title="Tables" main>
           <Button
-            href="https://github.com/justboil/admin-one-react-tailwind"
+            href="#"
             target="_blank"
-            icon={mdiGithub}
-            label="Star on GitHub"
+            icon={mdiTableBorder}
+            label="Tabels"
             color="contrast"
             roundedFull
             small
           />
         </SectionTitleLineWithButton>
 
-        <NotificationBar color="info" icon={mdiMonitorCellphone}>
+        {/* <NotificationBar color="info" icon={mdiMonitorCellphone}>
           <b>Responsive table.</b> Collapses on mobile
-        </NotificationBar>
+        </NotificationBar> */}
 
         <CardBox className="mb-6" hasTable>
           <TableSampleClients />
         </CardBox>
 
-        <SectionTitleLineWithButton icon={mdiTableOff} title="Empty variation" />
+        <SectionTitleLineWithButton icon={mdiTableOff} title="Empty Documents" />
 
         <NotificationBar color="danger" icon={mdiTableOff}>
           <b>Empty card.</b> When there&apos;s nothing to show
         </NotificationBar>
 
-        <CardBox>
+        {/* <CardBox>
           <CardBoxComponentEmpty />
-        </CardBox>
+        </CardBox> */}
       </SectionMain>
     </>
   )

@@ -39,8 +39,8 @@ const FormsPage = () => {
         <CardBox>
           <Formik
             initialValues={{
-              fullname: 'John Doe',
-              email: 'john.doe@example.com',
+              fullname: 'Florin Hodor',
+              email: 'florin_hodor@obtinecredit.ro',
               phone: '',
               color: 'green',
               textarea: 'Hello',

@@ -2,7 +2,6 @@ import {
   mdiAccount,
   mdiAsterisk,
   mdiFormTextboxPassword,
-  mdiGithub,
   mdiMail,
   mdiUpload,
 } from '@mdi/js'
@@ -43,10 +42,10 @@ const ProfilePage = () => {
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiAccount} title="Profile" main>
           <Button
-            href="https://github.com/justboil/admin-one-react-tailwind"
+            href="#"
             target="_blank"
-            icon={mdiGithub}
-            label="Star on GitHub"
+            icon={mdiAccount}
+            label="Profile"
             color="contrast"
             roundedFull
             small

@@ -1,14 +1,14 @@
 import {
   mdiAccountMultiple,
   mdiCartOutline,
-  mdiChartPie,
+
   mdiChartTimelineVariant,
   mdiGithub,
   mdiMonitorCellphone,
-  mdiReload,
+
 } from '@mdi/js'
 import Head from 'next/head'
-import React, { useState } from 'react'
+
 import type { ReactElement } from 'react'
 import Button from '../components/Button'
 import LayoutAuthenticated from '../layouts/Authenticated'
@@ -19,10 +19,10 @@ import { useSampleClients, useSampleTransactions } from '../hooks/sampleData'
 import CardBoxTransaction from '../components/CardBox/Transaction'
 import { Client, Transaction } from '../interfaces'
 import CardBoxClient from '../components/CardBox/Client'
-import SectionBannerStarOnGitHub from '../components/Section/Banner/StarOnGitHub'
+
 import CardBox from '../components/CardBox'
-import { sampleChartData } from '../components/ChartLineSample/config'
-import ChartLineSample from '../components/ChartLineSample'
+
+
 import NotificationBar from '../components/NotificationBar'
 import TableSampleClients from '../components/Table/SampleClients'
 import { getPageTitle } from '../config'
@@ -33,13 +33,13 @@ const DashboardPage = () => {
 
   const clientsListed = clients.slice(0, 4)
 
-  const [chartData, setChartData] = useState(sampleChartData())
+  // const [chartData, setChartData] = useState(sampleChartData())
 
-  const fillChartData = (e: React.MouseEvent) => {
-    e.preventDefault()
+  // const fillChartData = (e: React.MouseEvent) => {
+  //   e.preventDefault()
 
-    setChartData(sampleChartData())
-  }
+  //   setChartData(sampleChartData())
+  // }
 
   return (
     <>
@@ -49,10 +49,10 @@ const DashboardPage = () => {
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>
           <Button
-            href="https://github.com/justboil/admin-one-react-tailwind"
+            href="#"
             target="_blank"
             icon={mdiGithub}
-            label="Star on GitHub"
+            label="Clienti"
             color="contrast"
             roundedFull
             small
@@ -105,19 +105,19 @@ const DashboardPage = () => {
         </div>
 
         <div className="my-6">
-          <SectionBannerStarOnGitHub />
+          {/* <SectionBannerStarOnGitHub /> */}
         </div>
 
-        <SectionTitleLineWithButton icon={mdiChartPie} title="Trends overview">
+        {/* <SectionTitleLineWithButton icon={mdiChartPie} title="Trends overview">
           <Button icon={mdiReload} color="whiteDark" onClick={fillChartData} />
-        </SectionTitleLineWithButton>
+        </SectionTitleLineWithButton> */}
 
-        <CardBox className="mb-6">{chartData && <ChartLineSample data={chartData} />}</CardBox>
+        {/* <CardBox className="mb-6">{chartData && <ChartLineSample data={chartData} />}</CardBox> */}
 
         <SectionTitleLineWithButton icon={mdiAccountMultiple} title="Clients" />
 
         <NotificationBar color="info" icon={mdiMonitorCellphone}>
-          <b>Responsive table.</b> Collapses on mobile
+          <b>User Notification</b> 
         </NotificationBar>
 
         <CardBox hasTable>
